@@ -1,8 +1,19 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-/* Override the default Bootstrap font with Comic Sans MS! */
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Merriweather", serif;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
 }
