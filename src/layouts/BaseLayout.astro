@@ -1,0 +1,27 @@
+---
+import "../styles/global.css"; // Step 5 - global styles
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae</title>
+  </head>
+  <body>
+    <!-- Navbar with icon -->
+    <nav class="navbar navbar-expand-lg bg-light mb-4">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <i class="bi bi-person-circle me-2"></i> Curriculum Vitae
+        </a>
+      </div>
+    </nav>
+
+    <!-- Page content -->
+    <main class="container mb-5">
+      <slot />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Override the default Bootstrap font with Comic Sans MS! */
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 0;
+}
