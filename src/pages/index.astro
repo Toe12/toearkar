@@ -38,9 +38,7 @@ const cvPdfLink = "/cv.pdf";
         </h2>
       </div>
       <div class="card-body">
-        <p>
-          {about.aboutMe}
-        </p>
+        <p>{about.aboutMe}</p>
       </div>
     </div>
   </section>
@@ -56,14 +54,14 @@ const cvPdfLink = "/cv.pdf";
       <div class="card-body">
         <div class="mb-3">
           <i class="bi bi-envelope me-2"></i>
-          <strong>Email:</strong>{" "}
+          <strong>Email:</strong>
           <a href={`mailto:${contact.email}`} class="text-decoration-none">
             {contact.email}
           </a>
         </div>
         <div class="mb-3">
           <i class="bi bi-linkedin me-2"></i>
-          <strong>LinkedIn:</strong>{" "}
+          <strong>LinkedIn:</strong>
           <a
             href={contact.linkedin}
             target="_blank"
@@ -75,7 +73,7 @@ const cvPdfLink = "/cv.pdf";
         </div>
         <div class="mb-3">
           <i class="bi bi-github me-2"></i>
-          <strong>GitHub:</strong>{" "}
+          <strong>GitHub:</strong>
           <a
             href={contact.github}
             target="_blank"
@@ -110,7 +108,7 @@ const cvPdfLink = "/cv.pdf";
     </div>
   </section>
 
-  <!-- Professional Experience Section -->
+  <!-- Professional Experience Section with Bootstrap Accordion -->
   <section class="mb-5">
     <div class="card shadow-sm border-0">
       <div class="card-header bg-secondary text-white">
@@ -119,19 +117,38 @@ const cvPdfLink = "/cv.pdf";
         </h2>
       </div>
       <div class="card-body">
-        {experiences.map((exp) => (
-          <div class="mb-4">
-            <h5 class="mb-1">{exp.title}</h5>
-            <p class="text-muted mb-1">
-              {exp.company} | {exp.dateRange}
-            </p>
-            <ul class="small mb-0">
-              {exp.responsibilities.map((resp) => (
-                <li>{resp}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div class="accordion" id="experienceAccordion">
+          {experiences.map((exp, index) => (
+            <div class="accordion-item" key={index}>
+              <h2 class="accordion-header" id={`heading${index}`}>
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target={`#collapse${index}`}
+                  aria-expanded="false"
+                  aria-controls={`collapse${index}`}
+                >
+                  {exp.title} - {exp.company} ({exp.dateRange})
+                </button>
+              </h2>
+              <div
+                id={`collapse${index}`}
+                class="accordion-collapse collapse"
+                aria-labelledby={`heading${index}`}
+                data-bs-parent="#experienceAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="small mb-0">
+                    {exp.responsibilities.map((resp) => (
+                      <li>{resp}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -151,7 +168,7 @@ const cvPdfLink = "/cv.pdf";
             <p class="small">{project.description}</p>
             {project.posterLink && (
               <p class="small mb-0">
-                Poster Link:{" "}
+                Poster Link:
                 <a
                   href={project.posterLink}
                   target="_blank"
@@ -184,11 +201,11 @@ const cvPdfLink = "/cv.pdf";
             <strong>Databases:</strong> {skills.databases.join(", ")}
           </div>
           <div class="col-md-6 mb-2">
-            <strong>Version Control &amp; Issue Tracking:</strong>{" "}
+            <strong>Version Control &amp; Issue Tracking:</strong>
             {skills.versionControl.join(", ")}
           </div>
           <div class="col-md-6 mb-2">
-            <strong>Frameworks &amp; Libraries:</strong>{" "}
+            <strong>Frameworks &amp; Libraries:</strong>
             {skills.frameworks.join(", ")}
           </div>
           <div class="col-md-6 mb-2">
