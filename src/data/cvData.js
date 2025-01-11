@@ -5,7 +5,7 @@ export const contact = {
 };
 
 export const about = {
-  aboutMe: `I graduated from Webster University in 2020 and have been part of the engineering team at We Care Insurance since then. Currently, I’m based in Atlanta, GA. I enjoy working at a startup because it allows me to contribute to something new and exciting, and the fast-paced environment ensures there's always something new to learn. This constant challenge helps me grow my skills and experience.
+  aboutMe: `I graduated from Webster University in 2020 and have been part of the engineering team at We Care Insurance since then. Currently, I’m based in Atlanta, GA, United States. I enjoy working at a startup because it allows me to contribute to something new and exciting, and the fast-paced environment ensures there's always something new to learn. This constant challenge helps me grow my skills and experience.
             I’m passionate about technology and have extensive experience developing APIs, building web applications, and integrating third-party services. I’m also interested in expanding my knowledge of blockchain and LLM agentic technology and look forward to contributing to projects that utilize these fields. As a Java web developer with project management experience, I bring valuable expertise to any team. I’m excited to be part of a community that creates high-quality software for the betterment of society.
             `
 };
