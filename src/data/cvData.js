@@ -102,7 +102,12 @@ export const skills = {
     "Mockito",
     "JUnit",
     "Bootstraps",
+    "Express.js",
+    "Jest",
   ],
   cloud: ["Oracle Cloud Infrastructure (OCI)", "AWS S3"],
   containerization: ["Docker"],
+  CICD: ["GitHub Actions"],
 };
+
+

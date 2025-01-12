@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+
+import {
+    experiences
+} from "../data/cvData.js";
+---
+
+<BaseLayout>
+    <ExperienceSection experiences={experiences} />
+</BaseLayout>
