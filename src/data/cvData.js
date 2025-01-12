@@ -98,6 +98,7 @@ export const skills = {
     "Hyperledger Fabric",
     "Spring Boot",
     "Spring Data JPA",
+    "JDBC",
     "Mockito",
     "JUnit",
     "Bootstraps",
