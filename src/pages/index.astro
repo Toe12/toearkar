@@ -9,6 +9,7 @@ import ProjectsSection from "../components/ProjectsSection.astro";
 import SkillsSection from "../components/SkillsSection.astro";
 import Footer from "../components/Footer.astro";
 import OpenToChallengesSection from "../components/OpenToChallengesSection.astro";
+
 import {
   contact,
   about,
@@ -19,6 +20,11 @@ import {
 } from "../data/cvData.js";
 
 const cvPdfLink = "/cv.pdf";
+
+// Use the Vercel environment variable to get the last updated timestamp
+const lastUpdated = process.env.VERCEL_GIT_COMMIT_TIMESTAMP
+  ? new Date(Number(process.env.VERCEL_GIT_COMMIT_TIMESTAMP) * 1000).toISOString()
+  : new Date().toISOString();
 ---
 
 <BaseLayout>
@@ -30,5 +36,5 @@ const cvPdfLink = "/cv.pdf";
   <ProjectsSection personalProjects={personalProjects} />
   <SkillsSection skills={skills} />
   <OpenToChallengesSection />
-  <Footer socialLinks={contact} />
+  <Footer socialLinks={contact} lastUpdated={lastUpdated} />
 </BaseLayout>
