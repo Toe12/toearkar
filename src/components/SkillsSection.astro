@@ -1,0 +1,26 @@
+---
+import SectionCard from './SectionCard.astro';
+const { skills } = Astro.props;
+---
+<SectionCard title="Skills" icon="bi bi-tools">
+  <div class="row mb-2">
+    <div class="col-md-6 mb-2">
+      <strong>Languages:</strong> {skills.languages.join(", ")}
+    </div>
+    <div class="col-md-6 mb-2">
+      <strong>Databases:</strong> {skills.databases.join(", ")}
+    </div>
+    <div class="col-md-6 mb-2">
+      <strong>Version Control &amp; Issue Tracking:</strong> {skills.versionControl.join(", ")}
+    </div>
+    <div class="col-md-6 mb-2">
+      <strong>Frameworks &amp; Libraries:</strong> {skills.frameworks.join(", ")}
+    </div>
+    <div class="col-md-6 mb-2">
+      <strong>Cloud:</strong> {skills.cloud.join(", ")}
+    </div>
+    <div class="col-md-6 mb-2">
+      <strong>Containerization:</strong> {skills.containerization.join(", ")}
+    </div>
+  </div>
+</SectionCard>
