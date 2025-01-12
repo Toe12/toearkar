@@ -19,11 +19,9 @@ import {
   skills
 } from "../data/cvData.js";
 
-const cvPdfLink = "/cv.pdf";
+const lastUpdated = "2025-01-11";
 
-const lastUpdated = import.meta.env.VERCEL_GIT_COMMIT_TIMESTAMP
-  ? new Date(Number(import.meta.env.VERCEL_GIT_COMMIT_TIMESTAMP) * 1000).toISOString()
-  : new Date().toISOString();
+const cvPdfLink = "/cv.pdf";
 ---
 
 <BaseLayout>
