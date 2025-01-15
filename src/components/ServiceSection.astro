@@ -15,63 +15,62 @@ import { techStacks_icons as skills } from "../data/cvData";
 </main>
 
 <style>
-    .skills-section {
-      text-align: center;
-      margin-top: 2rem;
+  .skills-section {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .skills-grid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: scroll; /* Change overflow to scroll */
+    animation: moveRight 60s linear infinite;
+  }
+
+  .skill-item {
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+    margin: 0 1rem;
+  }
+
+  @keyframes moveRight {
+    from {
+      transform: translateX(-100%);
     }
-  
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
     .skills-grid {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 2rem;
-      overflow: hidden;
-      animation: moveRight 60s linear infinite;
+      gap: 1rem;
+      animation: moveRight 50s linear infinite;
     }
-  
-    .skill-item {
-      display: inline-block;
-      flex-shrink: 0;
-    }
-  
+
     .skill-item img {
-      width: 60px;
-      height: 60px;
-      margin: 0 1rem;
+      width: 50px;
+      height: 50px;
     }
-  
-    @keyframes moveRight {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(100%);
-      }
+  }
+
+  @media (max-width: 480px) {
+    .skills-grid {
+      gap: 0.5rem;
+      animation: moveRight 40s linear infinite;
     }
-  
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .skills-grid {
-        gap: 1rem;
-        animation: moveRight 50s linear infinite;
-      }
-  
-      .skill-item img {
-        width: 50px;
-        height: 50px;
-      }
+
+    .skill-item img {
+      width: 40px;
+      height: 40px;
     }
-  
-    @media (max-width: 480px) {
-      .skills-grid {
-        gap: 0.5rem;
-        animation: moveRight 40s linear infinite;
-      }
-  
-      .skill-item img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-  </style>
-  
+  }
+</style>
