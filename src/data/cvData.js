@@ -110,4 +110,17 @@ export const skills = {
   CICD: ["GitHub Actions"],
 };
 
+export const techStacks_icons = [
+  { src: "/icons/springboot.svg", alt: "Spring Boot" },
+  { src: "/icons/react.svg", alt: "React" },
+  { src: "/icons/express.svg", alt: "Express.js" },
+  { src: "/icons/mongodb.svg", alt: "MongoDB" },
+  { src: "/icons/nodejs.svg", alt: "Node.js" },
+  { src: "/icons/fabric.png", alt: "Hyperledger Fabric" },
+  { src: "/icons/docker.svg", alt: "Docker" },
+  { src: "/icons/redis.svg", alt: "Redis" },
+  { src: "/icons/mysql.svg", alt: "MySQL" },
+  { src: "/icons/astro.svg", alt: "Astro" }
+];
 
+export const lastUpdated = "2025-01-14";

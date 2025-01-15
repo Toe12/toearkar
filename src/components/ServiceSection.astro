@@ -1,0 +1,51 @@
+---
+import { techStacks_icons as skills } from "../data/cvData";
+---
+
+<main>
+  <section class="skills-section">
+    <div class="skills-grid">
+      {skills.map(skill => (
+        <div class="skill-item">
+          <img src={skill.src} alt={skill.alt} />
+        </div>
+      ))}
+    </div>
+  </section>
+</main>
+
+<style>
+    .skills-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  
+    .skills-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: moveRight 40s linear infinite;
+    }
+  
+    .skill-item {
+      display: inline-block;
+    }
+  
+    .skill-item img {
+      width: 60px;
+      height: 60px;
+      margin: 0 1rem;
+    }
+  
+    @keyframes moveRight {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+  
