@@ -22,15 +22,16 @@ import { techStacks_icons as skills } from "../data/cvData";
   
     .skills-grid {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
+      align-items: center;
       gap: 2rem;
       overflow: hidden;
-      white-space: nowrap;
-      animation: moveRight 40s linear infinite;
+      animation: moveRight 60s linear infinite;
     }
   
     .skill-item {
       display: inline-block;
+      flex-shrink: 0;
     }
   
     .skill-item img {
@@ -45,6 +46,31 @@ import { techStacks_icons as skills } from "../data/cvData";
       }
       to {
         transform: translateX(100%);
+      }
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .skills-grid {
+        gap: 1rem;
+        animation: moveRight 50s linear infinite;
+      }
+  
+      .skill-item img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .skills-grid {
+        gap: 0.5rem;
+        animation: moveRight 40s linear infinite;
+      }
+  
+      .skill-item img {
+        width: 40px;
+        height: 40px;
       }
     }
   </style>
