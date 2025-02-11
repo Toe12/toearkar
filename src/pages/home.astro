@@ -2,7 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeaderSection from "../components/HeaderSection.astro";
 import AboutSection from "../components/AboutSection.astro";
-import ContactSection from "../components/ContactSection.astro";
 import EducationSection from "../components/EducationSection.astro";
 import ExperienceSection from "../components/ExperienceSection.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
@@ -25,7 +24,6 @@ const cvPdfLink = "/cv.pdf";
 <BaseLayout>
   <HeaderSection cvPdfLink={cvPdfLink} />
   <AboutSection about={about} />
-  <!-- <ContactSection contact={contact} /> -->
   <EducationSection education={education} />
   <ExperienceSection experiences={experiences} />
   <ProjectsSection personalProjects={personalProjects} />
