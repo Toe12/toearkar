@@ -1,0 +1,16 @@
+---
+const { title, icon } = Astro.props;
+---
+
+<section class="mb-5">
+  <div class="card shadow-sm border-0">
+    <div class="card-header text-white" style="background-color: #626567;">
+      <h2 class="h4 m-0">
+        <i class={icon + " me-2"}></i>{title}
+      </h2>
+    </div>
+    <div class="card-body">
+      <slot />
+    </div>
+  </div>
+</section>

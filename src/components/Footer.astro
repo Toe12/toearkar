@@ -1,0 +1,37 @@
+---
+const { socialLinks } = Astro.props;
+import { lastUpdated } from "../data/cvData";
+---
+<footer class="text-center mt-5">
+  <p class="mb-2">Connect with me:</p>
+  <div class="d-flex justify-content-center gap-3">
+    {socialLinks.linkedin && (
+      <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+        <i class="bi bi-linkedin fs-4"></i>
+      </a>
+    )}
+    {socialLinks.github && (
+      <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+        <i class="bi bi-github fs-4"></i>
+      </a>
+    )}
+    {socialLinks.medium && (
+      <a href={socialLinks.medium} target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+        <i class="bi bi-medium fs-4"></i>
+      </a>
+    )}
+    {socialLinks.email && (
+      <a href={`mailto:${socialLinks.email}`} class="text-decoration-none">
+        <i class="bi bi-envelope fs-4"></i>
+      </a>
+    )}
+  </div>
+
+  {lastUpdated && (
+    <p class="mt-3 small text-muted">
+      Last updated: {new Date(lastUpdated).toLocaleDateString()}
+    </p>
+  )}
+
+  <p class="mt-3 small text-muted">© {new Date().getFullYear()} Toe Arkar. All rights reserved.</p>
+</footer>
