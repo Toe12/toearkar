@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderSection from "../components/HeaderSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import EducationSection from "../components/EducationSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import SkillsSection from "../components/SkillsSection.astro";
+import Footer from "../components/Footer.astro";
+import OpenToChallengesSection from "../components/OpenToChallengesSection.astro";
+
+import {
+  contact,
+  about,
+  education,
+  experiences,
+  personalProjects,
+  skills
+} from "../data/cvData.js";
+
+const cvPdfLink = "/cv.pdf";
+---
+
+<BaseLayout>
+  <HeaderSection cvPdfLink={cvPdfLink} />
+  <AboutSection about={about} />
+  <EducationSection education={education} />
+  <ExperienceSection experiences={experiences} />
+  <ProjectsSection personalProjects={personalProjects} />
+  <SkillsSection skills={skills} />
+  <OpenToChallengesSection />
+  <Footer socialLinks={contact} />
+</BaseLayout>

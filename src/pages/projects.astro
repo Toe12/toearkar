@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import OpenToChallengesSection from "../components/OpenToChallengesSection.astro";
+
+import {
+    personalProjects
+} from "../data/cvData.js";
+---
+
+<BaseLayout>
+    <ProjectsSection personalProjects={personalProjects} />
+    <OpenToChallengesSection />
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import SectionCard from './SectionCard.astro';
+const { contact } = Astro.props;
+---
+<SectionCard title="Contact" icon="bi bi-person-lines-fill">
+  <div class="mb-3">
+    <i class="bi bi-envelope me-2"></i>
+    <strong>Email:</strong>
+    <a href={`mailto:${contact.email}`} class="text-decoration-none">
+      {contact.email}
+    </a>
+  </div>
+  <div class="mb-3">
+    <i class="bi bi-linkedin me-2"></i>
+    <strong>LinkedIn:</strong>
+    <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+      {contact.linkedin}
+    </a>
+  </div>
+  <div class="mb-3">
+    <i class="bi bi-github me-2"></i>
+    <strong>GitHub:</strong>
+    <a href={contact.github} target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+      {contact.github}
+    </a>
+  </div>
+</SectionCard>

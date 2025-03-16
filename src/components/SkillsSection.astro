@@ -1,0 +1,14 @@
+---
+import SectionCard from './SectionCard.astro';
+const { skills } = Astro.props;
+---
+<SectionCard title="Skills" icon="bi bi-tools">
+  <div class="row mb-2">
+    {skills.sections.map((section) => (
+      <div class="col-md-6 mb-2">
+        <strong>{section.title}:</strong> {section.items.join(", ")}
+      </div>
+    ))}
+  </div>
+</SectionCard>
+

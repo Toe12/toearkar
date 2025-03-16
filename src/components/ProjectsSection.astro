@@ -1,0 +1,20 @@
+---
+import SectionCard from './SectionCard.astro';
+const { personalProjects } = Astro.props;
+---
+<SectionCard title="Personal Projects" icon="bi bi-lightbulb-fill">
+  {personalProjects.map((project) => (
+    <div class="mb-4">
+      <h5 class="mb-1">{project.name}</h5>
+      <p class="small">{project.description}</p>
+      {project.posterLink && (
+        <p class="small mb-0">
+          Poster Link:
+          <a href={project.posterLink} target="_blank" rel="noopener noreferrer">
+            {project.posterLink}
+          </a>
+        </p>
+      )}
+    </div>
+  ))}
+</SectionCard>

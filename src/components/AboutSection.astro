@@ -1,0 +1,7 @@
+---
+import SectionCard from './SectionCard.astro';
+const { about } = Astro.props;
+---
+<SectionCard title="About" icon="bi bi-info-circle-fill">
+  <p>{about.aboutMe}</p>
+</SectionCard>

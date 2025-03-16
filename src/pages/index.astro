@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderSection from "../components/HeaderSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+
+import {
+  about,
+} from "../data/cvData.js";
+
+const cvPdfLink = "/cv.pdf";
+---
+
+<BaseLayout>
+    <HeaderSection cvPdfLink={cvPdfLink} />
+    <AboutSection about={about} />
+</BaseLayout>
+

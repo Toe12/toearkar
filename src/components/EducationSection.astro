@@ -1,0 +1,14 @@
+---
+import SectionCard from './SectionCard.astro';
+const { education } = Astro.props;
+---
+<SectionCard title="Education" icon="bi bi-mortarboard-fill">
+  {education.map((ed) => (
+    <div class="mb-4">
+      <h5 class="mb-1">{ed.degree}</h5>
+      <p class="text-muted mb-1">
+        {ed.institution}, {ed.location} | {ed.dateRange}
+      </p>
+    </div>
+  ))}
+</SectionCard>
